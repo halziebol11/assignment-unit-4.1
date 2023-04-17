@@ -28,14 +28,14 @@ function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber
 };
 
-console.log('first number plus second number =', addNumbers())
+console.log('first number plus second number =', addNumbers(1,3))
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( numberOne, numberTwo, numberThree){
 return numberOne * numberTwo * numberThree;
 };
 
-console.log('1st number times 2nd number times 3rd number =', multiplyThree())
+console.log('1st number times 2nd number times 3rd number =', multiplyThree(1, 2, 3))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -68,15 +68,24 @@ function getLast( array ) {
   };
 };
 
-getLast([3, 6, 7]);
-getLast([]);
+console.log("the last element of the array is:", getLast([3, 6, 7]));
+console.log("the last element of the array is:", getLast([]);
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
-}
+  let exist = false;
+  for (int i = 0; i < (array.length -1); i++) {
+    if (array[i] == value) {
+      exist = true;
+    };
+  };
+  return exist
+};
+
+console.log("find -- should say true", find(4, [5, 6, 7, 4]));
+console.log("find -- should say false", find(2, [5, 6, 7, 4]));
 
 // ----------------------
 // Stretch Goals
