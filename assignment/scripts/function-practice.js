@@ -105,23 +105,32 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll(arrayNew ) {
+function sumAll(array2 ) {
   let sum = 0
   // TODO: loop to add items
-  for(int i = 0; i <(arrayNew.length-1); i++) {
-    sum = sum + arrayNew[i];
+  for(int i = 0; i <(array2.length-1); i++) {
+    sum = sum + array2[i];
   }
   return sum;
 };
 
 console.log('sum of array - should be 4', sumAll([6, 7, -7, -6, 4]));
 console.log('sum of array - should be 40', sumAll([6, 0, 34));
-  
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
-
+function positiveArray (arrayMixed) {
+  let arrayNew = [];
+  for (int i = 0, i <(arrayMixed.length-1); i++) {
+    if (arrayMixed[i] > 0) {
+      arrayNew.push(arrayMixed[i]);
+    };
+  };
+  return arrayNew;
+};
+console.log('array of positive numbers - should be [1,2,3]', positiveArray([-1, 1, 2, 3, 0]))
+console.log('array of positive numbers-- should be []', positiveArray([0,-1,-2]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
