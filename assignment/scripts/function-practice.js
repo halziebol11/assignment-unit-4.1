@@ -7,7 +7,8 @@ console.log('***** Function Practice *****')
 // 1. Function to return 'Hello World!'
 function hello() {
   return 'Hello World!';
-}
+};
+
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
 
@@ -16,7 +17,8 @@ console.log('Test - should say "Hello World!"', hello());
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
   return name;
-}
+};
+
 // Remember to call the function to test
 console.log('Hello', helloName());
 
@@ -24,13 +26,15 @@ console.log('Hello', helloName());
 function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
   return firstNumber + secondNumber
-}
+};
+
 console.log('first number plus second number =', addNumbers())
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( numberOne, numberTwo, numberThree){
-return numberOne * numberTwo * numberThree
-}
+return numberOne * numberTwo * numberThree;
+};
+
 console.log('1st number times 2nd number times 3rd number =', multiplyThree())
 
 // 5. Function that will return true if a number is positive, 
@@ -42,6 +46,8 @@ function isPositive( number ) {
   else {
     return;
   };
+};
+
 // Call the function to test each outcome (true & false)
 isPositive(4);
 isPositive(-4);
@@ -54,8 +60,16 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
+  if (array.length > 0) {
+    return array[array.length-1];
+  };
+  else {
+    return 'undefined'
+  };
+};
 
-}
+getLast([3, 6, 7]);
+getLast([]);
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
