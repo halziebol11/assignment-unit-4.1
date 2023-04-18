@@ -138,38 +138,20 @@ console.log('array of positive numbers-- should be []', positiveArray([0,-1,-2])
 //https://edabit.com/challenge/Q3n42rEWanZSTmsJm
 // The function minMax takes an array and returns an array [min number, max number]
 //that is derived from the elements in the argument array
-/*function minMax (array3) {
-let min = array3[0];
-let max = array3[0];
-let newArray = []
-for (let i = 0; i < array3.length; i++) {
-  if (array3[i] > max) {
-    max = array3[i];
-  }
-  else if (array3[i] < min) {
-    min = array3[i];
-  }
-};
-newArray.push(min);
-newArray.push(max);
-return newArray;
-
-};
-*/
 
 function minMax (array3) {
   let newArray = [array3[0], array3[0]]
   for (let i = 0; i < array3.length; i++) {
     if (array3[i] > newArray[1]) {
-      newArray.splice(1,1, array3[i]);
+      newArray[1] = array3[i];
     }
     else if (array3[i] < newArray[0]) {
-      newArray.splice(0,1, array3[i]);
+      newArray[0] = array3[i];
     }
   };
   return newArray;
   
   };
 
-console.log("minMax is ---should be [-1, 10]", minMax[0,-1,5, 10]);
-console.log("minMax is ---should be [3, 12]", minMax[4, 5, 7, 3, 10, 12]);
+console.log("minMax is ---should be [-1, 10]", minMax([0,-1,5, 10]));
+console.log("minMax is ---should be [3, 12]", minMax([4, 5, 7, 3, 10, 12]));
